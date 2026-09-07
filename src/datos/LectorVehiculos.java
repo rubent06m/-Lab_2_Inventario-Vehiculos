@@ -8,6 +8,7 @@ import java.util.List;
 import modelo.Automovil;
 import modelo.Camioneta;
 import modelo.Vehiculo;
+import modelo.Motocicleta;
 
 public class LectorVehiculos {
 
@@ -29,6 +30,9 @@ public class LectorVehiculos {
                         precio, (int) caracteristica));
             } else if (tipo.equalsIgnoreCase("CAMIONETA")) {
                 vehiculos.add(new Camioneta(marca, modelo, anio,
+                        precio, caracteristica));
+            } else if (tipo.equalsIgnoreCase("MOTOCICLETA")) {   // <-- nuevo bloque
+                vehiculos.add(new Motocicleta(marca, modelo, anio,
                         precio, caracteristica));
             }
         }
